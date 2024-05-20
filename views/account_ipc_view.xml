@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="account_ipc_view_tree" model="ir.ui.view">
+        <field name="name">account.ipc.view.tree</field>
+        <field name="model">account.ipc</field>
+        <field name="arch" type="xml">
+            <tree string="IPC" editable="bottom">
+                <field name="date" />
+                <field name="amount" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_account_ipc" model="ir.actions.act_window">
+        <field name="name">IPC</field>
+        <field name="res_model">account.ipc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_aaccount_ipc"
+	    name="IPC"
+	    parent="account.account_account_menu"
+	    action="action_account_ipc"
+            sequence="100"
+            />
+
+</odoo>
